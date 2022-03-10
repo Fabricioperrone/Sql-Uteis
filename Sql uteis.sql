@@ -87,3 +87,18 @@ select * from tb_clientes where idade <> '22';// diferente
 select * from tb_clientes where idade > '22';// maior que 22
 select * from tb_clientes where idade < '22';// menor que 22 anos
 
+
+//filtrando datas
+
+select * from tabela_de_vendedores;
+select * from tb_clientes;
+
+select * from tb_clientes where data_nascimento = '07/10/95';
+
+select * from tb_clientes where data_nascimento > TO_DATE('07/10/1995', 'DD/MM/YYYY');
+
+select * from tb_clientes where data_nascimento < TO_DATE('07/10/1995', 'DD/MM/YYYY');
+
+select * from tb_clientes where to_char(data_nascimento, 'MM') = 10 // buscando todos o aniversriantes do mês de outubro.
+
+select * from tabela_de_vendedores where to_char(data_admissao, 'YYYY') >= 2016 // pesquisa vendedor que foi admitido depois de 2016
