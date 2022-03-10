@@ -80,3 +80,10 @@ ALTER TABLE TB_CLIENTES ADD DATA_NASCIMENTO DATE;
 //Crie uma nova consulta e inclua uma chave primária na tabela de clientes:
 ALTER TABLE TB_CLIENTES ADD CONSTRAINT PK_TB_CLIENTES PRIMARY KEY (CPF);
 
+
+// filtros condicionais
+select * from tb_clientes where idade <= '22'; // menor ou igual
+select * from tb_clientes where idade <> '22';// diferente
+select * from tb_clientes where idade > '22';// maior que 22
+select * from tb_clientes where idade < '22';// menor que 22 anos
+
