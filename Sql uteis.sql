@@ -102,3 +102,18 @@ select * from tb_clientes where data_nascimento < TO_DATE('07/10/1995', 'DD/MM/Y
 select * from tb_clientes where to_char(data_nascimento, 'MM') = 10 // buscando todos o aniversriantes do mês de outubro.
 
 select * from tabela_de_vendedores where to_char(data_admissao, 'YYYY') >= 2016 // pesquisa vendedor que foi admitido depois de 2016
+
+-----------
+//filtros Compostos.
+
+select * from tb_produtos where  preco_lista >= 16.007;
+
+select * from tb_produtos where preco_lista >= 16 and preco_lista <= 21;
+
+select * from tb_clientes where idade > 22 and sexo = 'F'
+
+select * from tb_clientes where cidade = 'Rio de Janeiro' or bairro = 'Jardins';
+
+select * from tb_clientes where (idade >  22 and sexo = 'F') AND (CIDADE = 'Rio de Janeiro' or bairro = 'Jardins');
+
+SELECT * FROM TABELA_DE_VENDEDORES WHERE TO_CHAR(DATA_ADMISSAO, 'YYYY') < '2016' AND DE_FERIAS = 1;
